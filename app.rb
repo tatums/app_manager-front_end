@@ -15,10 +15,11 @@ class App < Sinatra::Base
     c.sites_path="/home/vagrant/sites"
   end
 
-
   helpers Sinatra::JSON
   register Sinatra::AssetPack
   register Sinatra::Namespace
+
+
   configure :development do
     register Sinatra::Reloader
   end
@@ -40,6 +41,9 @@ class App < Sinatra::Base
       '/js/controllers/form.js',
       '/js/services/site.js'
     ]
+    js_compression :jsmin
+    css_compression :sass
+
   end
 
   set :slim, :format => :html
