@@ -10,6 +10,12 @@ require "sinatra/json"
 require "sinatra/reloader"
 
 class App < Sinatra::Base
+
+  AppManager.configure do |c|
+    c.sites_path="/home/vagrant/sites"
+  end
+
+
   helpers Sinatra::JSON
   register Sinatra::AssetPack
   register Sinatra::Namespace
