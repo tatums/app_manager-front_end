@@ -67,6 +67,12 @@ class App < Sinatra::Base
       {site: {name: @site.name, status: @site.status, port: @site.port} }.to_json
     end
 
+    post "/sites/:name" do
+      @site = AppManager::Site.new(params[:name], AppManager::Util.next_port)
+      @site.save
+      {site: {name: @site.name, status: @site.status, port: @site.port} }.to_json
+    end
+
     get "/sites/:name" do
       @site = AppManager::Site.all.find { |s| s.name == params[:name] }
       {site: {name: @site.name, status: @site.status, port: @site.port} }.to_json

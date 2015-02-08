@@ -7,7 +7,6 @@
     </div>
     <form ng-submit="ctrl.submit(form, siteForm.$valid)" name="siteForm" class="navbar-form navbar-right" novalidate ng-controller="FormController as ctrl">
       <div class="form-group">
-          {{form}}
         <input ng-model="form.siteName" type="text" class="form-control" placeholder="New Site" required name="siteName">
         <p ng-if="siteForm.siteName.$error.required && siteForm.siteName.$touched" class="help-block">Site name is required.</p>
       </div>

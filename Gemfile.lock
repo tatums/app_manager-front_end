@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:tatums/app_manager.git
-  revision: 2bde3fd3c949ebc5dba522b59899c1e942e8de4f
+  revision: 713c59439a29d7178619de3da10ab64d363bf1b5
   specs:
     app_manager (0.0.1)
       thin (~> 1.6)
