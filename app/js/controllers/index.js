@@ -1,9 +1,9 @@
 'use strict';
 
 siteManagerControllers.controller('IndexController', [ '$scope', 'sites', 'Site', '$window', function($scope, sites, Site, $window){
-    $scope.hostname = $window.location.hostname
 
     $scope.sites = sites;
+    $scope.hostname = $window.location.hostname;
     $scope.start = function(site){
         var index = $scope.sites.indexOf(site)
         var s = new Site();
