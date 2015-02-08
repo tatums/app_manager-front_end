@@ -8,6 +8,7 @@ gem 'sinatra'
 gem "sinatra-contrib"
 gem "sinatra-assetpack"
 gem "slim"
+gem "foreman"
 gem "app_manager", git: "git@github.com:tatums/app_manager.git"
 
 gem 'capistrano'
