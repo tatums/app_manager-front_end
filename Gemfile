@@ -8,5 +8,10 @@ gem 'sinatra'
 gem "sinatra-contrib"
 gem "sinatra-assetpack"
 gem "slim"
-gem "app_manager", path: "./../app_manager"
+gem "app_manager", git: "git@github.com:tatums/app_manager.git"
+
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv', "~> 2.0"
+
 gem 'pry'
