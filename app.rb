@@ -51,7 +51,7 @@ class App < Sinatra::Base
 
   namespace '/api' do
     get "/sites" do
-      @sites = AppManager::Site.all
+      @sites = AppManager::Site.all.sort_by{|s| s.port}
       json @sites.map {|s| {name: s.name, status: s.status, port: s.port} }
     end
 
@@ -68,7 +68,7 @@ class App < Sinatra::Base
     end
 
     post "/sites/:name" do
-      @site = AppManager::Site.new(params[:name], AppManager::Util.next_port)
+      @site = AppManager::Site.new(params[:name], AppManager::Site.next_port)
       @site.save
       {site: {name: @site.name, status: @site.status, port: @site.port} }.to_json
     end
