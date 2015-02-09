@@ -1,5 +1,5 @@
 ---
-pid: tmp/pids/8000.pid
+pid: tmp/pids/5000.pid
 port: 5000
 timeout: 20
 wait: 20
