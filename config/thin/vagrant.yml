@@ -1,0 +1,14 @@
+---
+pid: tmp/pids/5000.pid
+port: 5000
+timeout: 20
+wait: 20
+log: log/thin.log
+max_conns: 1024
+require: []
+environment: production
+max_persistent_conns: 512
+threaded: true
+daemonize: true
+tag: thin-5000
+rackup: config.ru

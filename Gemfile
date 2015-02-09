@@ -14,5 +14,5 @@ gem "app_manager", "0.0.2", git: "git@github.com:tatums/app_manager.git"
 gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-rbenv', "~> 2.0"
-
+gem 'capistrano-thin'
 gem 'pry'
