@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:tatums/app_manager.git
-  revision: 713c59439a29d7178619de3da10ab64d363bf1b5
+  revision: 1acd72051fdc2bd716d93c709296c5270cf75b2d
   specs:
-    app_manager (0.0.1)
+    app_manager (0.0.2)
       thin (~> 1.6)
 
 GEM
@@ -77,7 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  app_manager!
+  app_manager (= 0.0.2)!
   capistrano
   capistrano-bundler
   capistrano-rbenv (~> 2.0)
