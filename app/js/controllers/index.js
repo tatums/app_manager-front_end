@@ -3,7 +3,6 @@
 siteManagerControllers.controller('IndexController', [ '$scope', 'sites', 'Site', function($scope, sites, Site) {
 
     $scope.sites = sites;
-    $scope.hostname = window.location.hostname;
     $scope.start = function(site){
         var index = $scope.sites.indexOf(site)
         var s = new Site();
@@ -28,5 +27,8 @@ siteManagerControllers.controller('IndexController', [ '$scope', 'sites', 'Site'
         };
     }
 
+    $scope.hostname = function(){
+        return window.location.hostname;
+    }
 
 }]);

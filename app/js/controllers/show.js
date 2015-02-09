@@ -24,5 +24,8 @@ siteManagerControllers.controller('ShowController', [ '$scope', 'site', 'Site', 
             return 'panel panel-danger';
         };
     }
+    $scope.hostname = function(){
+        return window.location.hostname;
+    }
 
 }]);

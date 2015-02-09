@@ -17,7 +17,7 @@
               <div class="panel-body">
                     {{site.port}}
                     <a ng-href="{{'#/sites/' + site.name}}">{{site.name}}</a>
-                    <a ng-href="{{'http://'+hostname+':'+ site.port}}" target="_blank"> {{"http://"+hostname+":"+site.port}}</a>
+                    <a ng-href="{{'http://'+hostname()+':'+ site.port}}" target="_blank"> {{"http://"+hostname()+":"+site.port}}</a>
 
                     <button ng-click="start(site)" class="btn btn-success">Start</button>
                     <button ng-click="stop(site)" class="btn btn-danger">Stop</button>
